@@ -7,4 +7,8 @@ module.exports = {
     'seeders-path': resolve(__dirname, 'src', 'database', 'seeders'),
 }
 
+// *** criar model e migrations
 // npx sequelize-cli model:generate --name User --attributes name:string,email:string,password_hash:string
+
+// *** executar a migration
+// npx sequelize-cli db:migrate
