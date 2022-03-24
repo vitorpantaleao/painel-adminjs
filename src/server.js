@@ -18,6 +18,6 @@ const adminJS = new AdminJS({
 const router = AdminJSExpress.buildRouter(adminJS)
 
 app.use(adminJS.options.rootPath, router)
-app.listen(5000, () => {
-    console.log('AdminJS está sendo executado em: http://localhost:5000/admin ')
+app.listen(5050, () => {
+    console.log('AdminJS está sendo executado em: http://localhost:5050/admin ')
 })

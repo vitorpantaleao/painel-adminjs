@@ -6,14 +6,6 @@ class User extends Model {
       initials: {
         type: Sequelize.VIRTUAL,
         get() {
-          // Vitor Pantaleao -> VP
-          // [0] = Vitor
-          // [1] = Pantaleao
-          // VP
-
-          // Vitor
-          // V
-
           const match = this.name.split("")
 
           if(match.length > 1) {
@@ -27,8 +19,8 @@ class User extends Model {
       email: Sequelize.STRING,
       password: Sequelize.VIRTUAL,
       password_hash: Sequelize.STRING,
-      role: Sequelize.ENUM('admin', 'manager', 'developer'),
-      status: Sequelize.ENUM('active', 'archived'),
+      role: Sequelize.ENUM("admin", "manager", "developer"),
+      status: Sequelize.ENUM("active", "archived"),
     }, {
       sequelize,
       name: {
