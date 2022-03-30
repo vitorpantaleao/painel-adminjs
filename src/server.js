@@ -6,6 +6,7 @@ import AdminJSSequelize from '@adminjs/sequelize'
 import express from "express"
 
 import UsersResource from "./resources/UsersResource"
+import ProjectsResource from "./resources/ProjectsResource"
 
 import locale from "./locales"
 
@@ -16,7 +17,7 @@ const app = express()
 const adminJS = new AdminJS({
     databases: [],
     rootPath: '/admin',
-    resources: [ UsersResource ],
+    resources: [ UsersResource, ProjectsResource ],
     ...locale,
 })
 
