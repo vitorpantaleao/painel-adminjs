@@ -4,6 +4,31 @@ import User from "../models/user";
 export default {
     resource: User,
     options: {
+        parent: {
+            icon: "User",
+        },
+        actions: {
+            resetPassword: {
+                actionType: "record",
+                icon: "Password",
+                handler: async (req, res, context) => {
+                    // const { password } = req.body;
+                    // if (!password) {
+                    //     return res.status(400).json({
+                    //         message: "Password is required",
+                    //     });
+                    // }
+                    // context.password = password;
+                    // await context.save();
+                    // return res.json({
+                    //     message: "Password reset successfully",
+                    // });
+                    return {
+                        record: context.record.toJSON(),
+                    }
+                },
+            },
+        },
         properties: {
             id: {
                 position: 1
