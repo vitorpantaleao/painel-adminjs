@@ -19,6 +19,7 @@ export default {
                 position: 3,
                 isVisible: { list: false, filter: false, show: true, edit: true },
                 type: "richtext",
+                // quillJS
                 props: {
                     quill: {
                         modules: {
