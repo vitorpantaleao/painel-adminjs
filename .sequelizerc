@@ -9,6 +9,7 @@ module.exports = {
 
 // *** criar model e migrations
 // npx sequelize-cli model:generate --name User --attributes name:string,email:string,password_hash:string
+// npx sequelize-cli model:generate --name Project --attributes name:string,description:string,status:enum,user_id:integer
 
 // *** executar a migration
 // npx sequelize-cli db:migrate
